@@ -4,6 +4,7 @@ import './App.css'
 import LocationInfo from './components/LocationInfo'
 import Pagination from './components/Pagination'
 import ResidentCard from './components/ResidentCard'
+import ResidentList from './components/ResidentList'
 import {getRandomNumber} from './utils/handleRandom'
 
 const RESIDENTS_PERPAGE = 12
@@ -57,9 +58,7 @@ function App() {
       </form>
       <LocationInfo location={location}/>
       <Pagination numbersPage={numbersPage} setPage={setPage} />
-      {
-        pagination()?.map(residentUrl => <ResidentCard key={residentUrl} residentUrl={residentUrl}/>)
-      }
+      <ResidentList pagination={pagination} />
       <Pagination numbersPage={numbersPage} setPage={setPage} />
     </div>
   )
