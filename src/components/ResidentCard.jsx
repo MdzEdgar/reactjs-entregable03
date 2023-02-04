@@ -12,7 +12,9 @@ const ResidentCard = ({residentUrl}) => {
 
   return (
     <article>
-      <div><img src={residentInfo?.image} alt="" /></div>
+      <div>
+        <img src={residentInfo?.image} alt="" />
+      </div>
       <section>
         <h3>{residentInfo?.name}</h3>
         <ul>

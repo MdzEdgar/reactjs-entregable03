@@ -5,9 +5,9 @@ const LocationInfo = ({location}) => {
     <section>
         <h2>{location?.name}</h2>
         <ul>
-          <li><span>Type: {location?.type}</span></li>
-          <li><span>Dimension: {location?.dimension}</span></li>
-          <li><span>Population: {location?.residents.length}</span></li>
+          <li><span>Type: </span>{location?.type}</li>
+          <li><span>Dimension: </span>{location?.dimension}</li>
+          <li><span>Population: </span>{location?.residents.length}</li>
         </ul>
       </section>
   )
