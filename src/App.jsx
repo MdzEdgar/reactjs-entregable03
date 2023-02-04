@@ -20,6 +20,7 @@ function App() {
     setNameLocation(e.target.idLocation.value)
   }
 
+  //Función que se encarga de obtener los nuevos residentes dependiendo de la pagina actual
   const pagination = () => {
     if(!location) return []
     const maxLimit = RESIDENTS_PERPAGE * page
