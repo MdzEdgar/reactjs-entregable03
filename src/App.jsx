@@ -6,6 +6,7 @@ import Pagination from './components/Pagination'
 import ResidentCard from './components/ResidentCard'
 import ResidentForm from './components/ResidentForm'
 import ResidentList from './components/ResidentList'
+import { numbersPage } from './utils/handlePagination'
 import {getRandomNumber} from './utils/handleRandom'
 
 const RESIDENTS_PERPAGE = 12
@@ -30,15 +31,6 @@ function App() {
     const minLimit = maxLimit - RESIDENTS_PERPAGE
     const newResidents = location?.residents.slice(minLimit, maxLimit)
     return newResidents
-  }
-
-  const numbersPage = () => {
-    const quantityPages = Math.ceil(location?.residents.length / RESIDENTS_PERPAGE);
-    const arrayPages = []
-    for (let i = 1; i <= quantityPages; i++) {
-      arrayPages.push(i)
-    }
-    return arrayPages
   }
 
   //Efecto que se ejecuta en el primer render y cuando cambia nameLocation
