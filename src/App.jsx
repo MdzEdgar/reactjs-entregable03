@@ -3,10 +3,8 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import LocationInfo from './components/LocationInfo'
 import Pagination from './components/Pagination'
-import ResidentCard from './components/ResidentCard'
 import ResidentForm from './components/ResidentForm'
 import ResidentList from './components/ResidentList'
-import { numbersPage } from './utils/handlePagination'
 import {getRandomNumber} from './utils/handleRandom'
 
 const RESIDENTS_PERPAGE = 12
@@ -47,9 +45,9 @@ function App() {
     <div className="App">
       <ResidentForm handleSubmit={handleSubmit} />
       <LocationInfo location={location}/>
-      <Pagination numbersPage={numbersPage} setPage={setPage} />
+      <Pagination RESIDENTS_PERPAGE={RESIDENTS_PERPAGE} location={location} setPage={setPage} />
       <ResidentList pagination={pagination} />
-      <Pagination numbersPage={numbersPage} setPage={setPage} />
+      <Pagination RESIDENTS_PERPAGE={RESIDENTS_PERPAGE} location={location} setPage={setPage} />
     </div>
   )
 }
