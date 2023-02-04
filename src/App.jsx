@@ -4,6 +4,7 @@ import './App.css'
 import LocationInfo from './components/LocationInfo'
 import Pagination from './components/Pagination'
 import ResidentCard from './components/ResidentCard'
+import ResidentForm from './components/ResidentForm'
 import ResidentList from './components/ResidentList'
 import {getRandomNumber} from './utils/handleRandom'
 
@@ -52,10 +53,7 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
-        <input type="text" id='idLocation' placeholder='type a location id' />
-        <button>Search</button>
-      </form>
+      <ResidentForm handleSubmit={handleSubmit} />
       <LocationInfo location={location}/>
       <Pagination numbersPage={numbersPage} setPage={setPage} />
       <ResidentList pagination={pagination} />
