@@ -5,16 +5,27 @@ import LocationInfo from './components/LocationInfo'
 import ResidentCard from './components/ResidentCard'
 import {getRandomNumber} from './utils/handleRandom'
 
+const RESIDENTS_PERPAGE = 12
+
 function App() {
   //Estado que almacena la información de la location
   const [location, setLocation] = useState()
   //Estado que almacena la información del input no controlado
   const [nameLocation, setNameLocation] = useState("")
+  const [page, setPage] = useState(1)
 
   //Funcion que se ejecuta en el submit del formulario
   const handleSubmit = (e) => {
     e.preventDefault()
     setNameLocation(e.target.idLocation.value)
+  }
+
+  const pagination = () => {
+    if(!location) return []
+    const maxLimit = RESIDENTS_PERPAGE * page
+    const minLimit = maxLimit - RESIDENTS_PERPAGE
+    const newResidents = location?.residents.slice(minLimit, maxLimit)
+    return newResidents
   }
 
   //Efecto que se ejecuta en el primer render y cuando cambia nameLocation
@@ -34,7 +45,7 @@ function App() {
       </form>
       <LocationInfo location={location}/>
       {
-        location?.residents.map(residentUrl => <ResidentCard key={residentUrl} residentUrl={residentUrl}/>)
+        pagination()?.map(residentUrl => <ResidentCard key={residentUrl} residentUrl={residentUrl}/>)
       }
     </div>
   )
