@@ -29,8 +29,18 @@ function App() {
     return newResidents
   }
 
+  const numbersPage = () => {
+    const quantityPages = Math.ceil(location?.residents.length / RESIDENTS_PERPAGE);
+    const arrayPages = []
+    for (let i = 1; i <= quantityPages; i++) {
+      arrayPages.push(i)
+    }
+    return arrayPages
+  }
+
   //Efecto que se ejecuta en el primer render y cuando cambia nameLocation
   useEffect(() => {
+    setPage(1)
     const dimension = nameLocation === "" ? getRandomNumber(126) : nameLocation
     const URL =`https://rickandmortyapi.com/api/location/${dimension}`
     axios.get(URL)
@@ -48,6 +58,11 @@ function App() {
       {
         pagination()?.map(residentUrl => <ResidentCard key={residentUrl} residentUrl={residentUrl}/>)
       }
+      <ul>
+        {
+          numbersPage().map(numberPage => <li onClick={() => setPage(numberPage)} key={numberPage}>{numberPage}</li>)
+        }
+      </ul>
     </div>
   )
 }
