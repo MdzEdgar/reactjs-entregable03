@@ -1,6 +1,6 @@
 .residentCard {
   background-color: #062226;
-  color: white;
+  color: #FBFBFB;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
@@ -67,7 +67,7 @@
 }
 
 .residentCard__item span {
-  color: rgb(168, 168, 168);
+  color: #7E7E7E;
   font-weight: bold;
   display: block;
 }
