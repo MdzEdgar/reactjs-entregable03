@@ -1,0 +1,17 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pagination__page {
+  aspect-ratio: 1;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 20px;
+}
