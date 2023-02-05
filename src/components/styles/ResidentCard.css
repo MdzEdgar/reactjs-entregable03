@@ -54,6 +54,7 @@
   position: relative;
   width: 200%;
   left: -40px;
+  border: 0.5px solid #084851;
 }
 
 .residentCard__list {
