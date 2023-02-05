@@ -1,0 +1,31 @@
+.locationCard{
+  background-color: #062226;
+  margin-top: 20px;
+  margin: 20px 8px 0;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.locationCard__name {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px; 
+  margin-bottom: 20px;
+}
+
+.locationCard__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.locationCard__item {
+  line-height: 20px;
+}
+
+.locationCard__item span{
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
