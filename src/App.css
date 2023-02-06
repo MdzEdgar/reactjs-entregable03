@@ -1,3 +1,13 @@
 .App {
   padding: 0 15px;
 }
+
+header.header{
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.header img {
+  margin: 0 auto;
+  background-size: fill;
+}

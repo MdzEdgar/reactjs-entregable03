@@ -43,6 +43,9 @@ function App() {
 
   return (
     <div className="App">
+      <header className="header">
+        <img src="header.jpg" alt="" />
+      </header>
       <ResidentForm handleSubmit={handleSubmit} />
       <LocationInfo location={location}/>
       <Pagination RESIDENTS_PERPAGE={RESIDENTS_PERPAGE} location={location} setPage={setPage} />
