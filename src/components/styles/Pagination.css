@@ -8,6 +8,12 @@
   max-width: 1400px;
 }
 
+@media screen and (max-width: 480px) {
+  .pagination{
+    flex-wrap: wrap;
+  } 
+}
+
 .pagination__page {
   aspect-ratio: 1;
   padding: 10px;
