@@ -1,9 +1,10 @@
 .locationCard{
   background-color: #062226;
   margin-top: 20px;
-  margin: 20px 8px 0;
+  margin: 20px auto;
   padding: 30px 20px;
   border-radius: 10px;
+  max-width: 1400px
 }
 
 .locationCard__name {
@@ -16,8 +17,17 @@
 
 .locationCard__list {
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   gap: 15px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .locationCard__list{
+    flex-direction: column;
+    align-items: flex-start;
+  } 
 }
 
 .locationCard__item {
