@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { numbersPage } from '../utils/handlePagination'
 import './styles/Pagination.css'
 
 const Pagination = ({setPage, RESIDENTS_PERPAGE, location}) => {
+
   return (
     
     <ul className='pagination'>
