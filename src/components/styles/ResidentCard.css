@@ -48,6 +48,7 @@
 .residentCard__name {
   margin-bottom: 10px;
   font-size: 25px;
+  text-align: justify;
 }
 
 .residentCard__line{
