@@ -8,7 +8,10 @@ const Pagination = ({setPage, RESIDENTS_PERPAGE, location}) => {
     <ul className='pagination'>
         {
           numbersPage(location, RESIDENTS_PERPAGE).map(numberPage => <li  className='pagination__page' onClick={
-            () => setPage(numberPage)
+            () => {
+              setPage(numberPage)
+              window.scrollTo( 0, 0);
+            }
           } key={numberPage}>{numberPage}</li>)
         }
       </ul>
