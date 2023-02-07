@@ -19,7 +19,7 @@ function App() {
   //Funcion que se ejecuta en el submit del formulario
   const handleSubmit = (e) => {
     e.preventDefault()
-    setNameLocation(e.target.idLocation.value)
+    setNameLocation(e.target.inputLocation.value)
   }
 
   //Función que se encarga de obtener los nuevos residentes dependiendo de la pagina actual
