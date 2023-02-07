@@ -1,0 +1,39 @@
+.residentForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.residentForm__input {
+  border: none;
+  height: 40px;
+  padding: 10px;
+  outline: none;
+  font-size: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin:0;
+  text-align: center;
+  background-color: #062226;
+  color: #fff;
+}
+
+
+
+.residentForm__input:focus{
+background-color: #05292e;
+border: solid 0.5px #0AF049;
+color: #CEFDFF;
+}
+
+.residentForm__btn {
+  margin:0;
+  height: 40px;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 5px;
+}
