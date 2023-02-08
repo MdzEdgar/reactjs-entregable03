@@ -24,22 +24,79 @@
   border-bottom-right-radius: 5px;
 }
 
-.Alive{
-  background-color: greenyellow;
-}
-
-.unknown {
-  background-color: dimgray;
-}
-
-.Dead{
-  background-color: red;
-}
-
 .residentCard__status-circle {
   width: 12px;
   height: 12px;
   border-radius: 50%;
+}
+
+.Alive{
+  background-color: rgba(173, 255, 47, 1);
+  box-shadow: 0 0 0 0 rgba(173, 255, 47, 1);
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+  }
+}
+
+.unknown {
+  background-color: rgba(105, 105, 105, 1);
+  box-shadow: 0 0 0 0 rgba(105, 105, 105, 1);
+  animation: pulse-gray 2s infinite;
+}
+
+@keyframes pulse-gray {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(105, 105, 105, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(105, 105, 105, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(105, 105, 105, 0);
+  }
+}
+
+.Dead{
+  background-color: rgba(255, 0, 0, 1);
+  box-shadow: 0 0 0 0 rgba(255, 0, 0, 1);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 0, 0, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
 }
 
 .residentCard__status-name {
