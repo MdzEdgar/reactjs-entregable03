@@ -10,15 +10,15 @@
 }
 
 .pagination__page:hover {
-  background-color: #062226;
-  border: solid 0.5px #0AF049;
-  border-radius: 50%;
+  background-color: #032e35;
+  border: solid 0.5px #18973a;
+  border-radius: 27%;
 }
 
 .pagination__page:active {
-  background-color: #062226;
-  border: solid 0.5px #0AF049;
-  border-radius: 50%;
+  background-color: #082227;
+  border: solid 0.5px #00ff40;
+  border-radius: 25%;
 }
 
 @media screen and (max-width: 480px) {
@@ -27,9 +27,15 @@
   }
 
   .pagination__page:hover {
-    background-color: #062226;
-    border: solid 0.5px #0AF049;
-    border-radius: 50%;
+    background-color: #032e35;
+  border: solid 0.5px #18973a;
+    border-radius: 25%;
+  }
+
+  .pagination__page:active {
+    background-color: #082227;
+    border: solid 0.5px #00ff40;
+    border-radius: 23%;
   }
 }
 
@@ -37,10 +43,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   padding: 10px;
   cursor: pointer;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color:#ababab;
+  border-radius: 25%;
+  background-color: #062226
 }
