@@ -59,12 +59,14 @@ function App() {
             RESIDENTS_PERPAGE={RESIDENTS_PERPAGE}
             location={location}
             setPage={setPage}
+            page={page}
           />
           <ResidentList pagination={pagination} />
           <Pagination
             RESIDENTS_PERPAGE={RESIDENTS_PERPAGE}
             location={location}
             setPage={setPage}
+            page={page}
           />
         </>
       ) : (

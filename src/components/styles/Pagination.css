@@ -54,3 +54,7 @@
   border-radius: 25%;
   background-color: #062226
 }
+
+.pagination__page.active {
+  background-color: red;
+}
