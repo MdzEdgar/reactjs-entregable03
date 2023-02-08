@@ -10,4 +10,5 @@ header.header{
 .header img {
   margin: 0 auto;
   background-size: fill;
+  border-radius: 2.5px;
 }
