@@ -2,12 +2,24 @@ import { numbersPage } from '../utils/handlePagination'
 import './styles/Pagination.css'
 
 const Pagination = ({setPage, RESIDENTS_PERPAGE, location, page}) => {
-  console.log(page)
+  const nPages = Math.ceil(location?.residents.length / RESIDENTS_PERPAGE);
+
+  const nextPage = () => {
+    if(page !== nPages) setPage(page + 1)
+  }
+
+  const prevPage = () => {
+    if(page !== 1) setPage(page -1)
+  }
 
   return (
     
     <ul className='pagination'>
-      <li><a href="#">Prev</a></li>
+      <li>
+        <a onClick={prevPage} href="#">
+          <i className='bx bx-chevron-left'></i>
+        </a>
+      </li>
         {
           numbersPage(location, RESIDENTS_PERPAGE).map(numberPage => 
           <li key={numberPage} 
@@ -21,7 +33,11 @@ const Pagination = ({setPage, RESIDENTS_PERPAGE, location, page}) => {
             {numberPage}
           </li>)
         }
-        <li><a href="#">Next</a></li>
+        <li>
+          <a onClick={nextPage} href="#">
+            <i className='bx bx-chevron-right' ></i>
+          </a>
+        </li>
       </ul>
   )
 }

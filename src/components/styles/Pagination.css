@@ -9,6 +9,11 @@
   max-width: 1400px;
 }
 
+.pagination li > a {
+  font-size: 28px;
+  color: inherit;
+}
+
 .pagination__page:hover {
   background-color: #032e35;
   border: solid 0.5px #18973a;
