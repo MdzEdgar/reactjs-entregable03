@@ -6,6 +6,12 @@
   position: relative;
 }
 
+.residentCard__img img{
+ 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
 .residentCard__status {
   position: absolute;
   top: 25px;
@@ -38,24 +44,23 @@
 
 .residentCard__status-name {
   font-weight: normal;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .residentCard__info {
-  padding: 20px;
+  padding: 15px;
 }
 
 .residentCard__name {
   margin-bottom: 10px;
-  font-size: 25px;
-  text-align: justify;
+  font-size: 30px;
 }
 
 .residentCard__line{
   position: relative;
   width: 200%;
   left: -40px;
-  border: 0.5px solid #084851;
+  border: 1px solid #0da32d;
 }
 
 .residentCard__list {
@@ -69,7 +74,7 @@
 }
 
 .residentCard__item span {
-  color: #7E7E7E;
+  color: #ffffff;
   font-weight: bold;
   display: block;
   text-transform: uppercase;
