@@ -13,7 +13,6 @@ const Pagination = ({setPage, RESIDENTS_PERPAGE, location, page}) => {
   }
 
   return (
-    
     <ul className='pagination'>
       <li>
         <a onClick={prevPage} href="#">

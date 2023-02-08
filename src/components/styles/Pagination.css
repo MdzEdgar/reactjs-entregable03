@@ -61,5 +61,11 @@
 }
 
 .pagination__page.active {
-  background-color: red;
+  border: solid 0.5px #e12d37;
+  background-color: #DB3069;
+  color: #f7f5dd;
+}
+
+.pagination li a i:hover {
+  color: #e12d37;
 }
