@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import './App.css'
+import Loader from './components/Loader'
 import LocationInfo from './components/LocationInfo'
 import Pagination from './components/Pagination'
 import ResidentForm from './components/ResidentForm'
@@ -37,22 +38,40 @@ function App() {
     const dimension = nameLocation === "" ? getRandomNumber(126) : nameLocation
     const URL =`https://rickandmortyapi.com/api/location/${dimension}`
     axios.get(URL)
-    .then((res) => setLocation(res.data))
+    .then((res) => {
+      setTimeout(() => {
+        setLocation(res.data)
+      }, 1000);
+    })
     .catch((err) => console.log(err))
   }, [nameLocation])
 
   return (
     <div className="App">
-      <header className="header">
-        <img src="header.jpg" alt="" />
-      </header>
-      <ResidentForm handleSubmit={handleSubmit} />
-      <LocationInfo location={location}/>
-      <Pagination RESIDENTS_PERPAGE={RESIDENTS_PERPAGE} location={location} setPage={setPage} />
-      <ResidentList pagination={pagination} />
-      <Pagination RESIDENTS_PERPAGE={RESIDENTS_PERPAGE} location={location} setPage={setPage} />
+      {location ? (
+        <>
+          <header className="header">
+            <img src="header.jpg" alt="" />
+          </header>
+          <ResidentForm handleSubmit={handleSubmit} />
+          <LocationInfo location={location} />
+          <Pagination
+            RESIDENTS_PERPAGE={RESIDENTS_PERPAGE}
+            location={location}
+            setPage={setPage}
+          />
+          <ResidentList pagination={pagination} />
+          <Pagination
+            RESIDENTS_PERPAGE={RESIDENTS_PERPAGE}
+            location={location}
+            setPage={setPage}
+          />
+        </>
+      ) : (
+        <Loader />
+      )}
     </div>
-  )
+  );
 }
 
 export default App
